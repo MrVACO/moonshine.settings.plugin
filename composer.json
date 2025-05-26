@@ -1,0 +1,32 @@
+{
+    "name": "mr-vaco/moonshine.settings.plugin",
+    "description": "",
+    "keywords": [],
+    "type": "library",
+    "homepage": "https://github.com/MrVACO/moonshine.settings.plugin",
+    "authors": [
+        {
+            "name": "Artem Mr.VACO Feoktistov"
+        }
+    ],
+    "require": {
+        "moonshine/moonshine": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrVaco\\Moonshine\\Settings\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MrVaco\\Moonshine\\Settings\\SettingsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
