@@ -13,30 +13,22 @@ class SettingsService
     {
         return Settings::query()
             ->where('key', $key)
-            ->firstOrFail();
+            ->first();
     }
 
     public function set($key, mixed $value): Settings
     {
         $column = match (true)
         {
-            is_int($value) => 'integer',
-            is_bool($value) => 'boolean',
-            is_array($value), is_object($value) => 'json',
-            default => 'string'
-        };
-
-        $type = match (true)
-        {
             is_int($value) => SettingsTypeEnum::Integer,
             is_bool($value) => SettingsTypeEnum::Bool,
-            is_array($value), is_object($value) => SettingsTypeEnum::Array,
+            is_array($value), is_object($value) => SettingsTypeEnum::Json,
             default => SettingsTypeEnum::String,
         };
 
         return Settings::updateOrCreate(
             ['key' => $key],
-            [$column => $value, 'type' => $type]
+            [$column->value => $value, 'type' => $column]
         );
     }
 }
