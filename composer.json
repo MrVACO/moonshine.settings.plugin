@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "moonshine/moonshine": "^3",
+        "moonshine/moonshine": "^4",
         "mr-vaco/helpers": "^1.0"
     },
     "autoload": {

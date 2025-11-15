@@ -9,7 +9,7 @@ use MrVaco\Moonshine\Settings\Models\Settings;
 
 class SettingsService
 {
-    public function get($key)
+    public function get($key): ?Settings
     {
         return Settings::query()
             ->where('key', $key)
