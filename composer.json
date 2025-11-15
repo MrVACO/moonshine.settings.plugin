@@ -3,6 +3,7 @@
     "description": "",
     "keywords": [],
     "type": "library",
+    "license": "MIT",
     "homepage": "https://github.com/MrVACO/moonshine.settings.plugin",
     "authors": [
         {
