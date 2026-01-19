@@ -14,10 +14,6 @@ composer require mr-vaco/moonshine.settings.plugin
 ```
 
 ```bash
-php artisan vendor:publish --tag=settings
-```
-
-```bash
 php artisan migrate
 ```
 
